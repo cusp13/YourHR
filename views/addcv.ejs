@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head')%>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Resume</title>
+</head>
+<body>
+    <%- include('./partials/nav')%>
+    <div class="container" mt-3>
+        <form action="/cv" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="Resume" class="form-label">Resume</label>
+              <input type="file" 
+              class="form-control" 
+              id="Resume" 
+              name="Resume" 
+              aria-describedby="Resume">
+            </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">Role you want to apply!</label>
+                <input type="text" 
+                class="form-control" 
+                id="title" 
+                name="title" 
+                aria-describedby="title">
+              </div>
+            
+            <div class="mb-3">
+                <label for="body" class="mb-2">About Youself</label>
+                    <textarea class="form-control" name="body" id="body"></textarea>
+                  </div>
+              <div class="mb-3">
+                <button class="btn btn-primary">Submit</button>
+            </form>
+     </div>
+    <%- include('./partials/script')%>
+</body>
+</html>

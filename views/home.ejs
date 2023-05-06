@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head')%>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-page</title>
+</head>
+<body>
+    <%- include('./partials/nav')%>
+    <div class="container mt-3">
+        <% cvs.forEach(cv => { %>
+            <div class="card text-center mt-2" >
+                <div class="card-body">
+                  <h5 class="card-title"><%= cv.title %></h5>
+                  <p class="card-text"><%= cv.body %></p>
+                  <a href="<%=cv.resumeURL %>"  class="btn btn-primary">Download Resume</a>
+                </div>
+              </div>
+        <%});%>
+    </div>
+    <%- include('./partials/script')%>
+</body>
+</html>
